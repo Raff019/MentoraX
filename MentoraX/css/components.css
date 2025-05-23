@@ -1,0 +1,28 @@
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgb(137, 52, 199);
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  
+  .btn:hover {
+    background:  rgb(180, 114, 226);
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+  }
+  .decoration{
+    text-decoration: none;
+  }
+  

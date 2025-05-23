@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    color: white;
+  }
+  
+  .container {
+    padding: 40px;
+    text-align: center;
+    
+  }
+  
+  .navbar {
+    padding: 15px 30px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-image: linear-gradient(to right, #c733db 4%, #000000 100%);
+    margin-top: 50px;
+    text-decoration: none;
+  }
+  

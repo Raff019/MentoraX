@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script>
+        function login() {
+        const email = document.getElementById('loginEmail').value;
+        const password = document.getElementById('loginPassword').value;
+        if (!email || !password) {
+            alert("Preencha todos os campos para entrar.");
+            return;
+        }
+        const savedPassword = localStorage.getItem(email);
+        if (savedPassword === null) {
+            alert("Usuário não encontrado. Registre-se primeiro.");
+        } else if (savedPassword === password) {
+            alert("Login bem-sucedido!");
+            window.location.href = '../pages/courseCatalog.html';
+        } else {
+            alert("Senha incorreta.");
+        }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff; 
+            padding: 10px 17px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        h2 {
+            color: rgb(137, 52, 199); 
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid rgb(137, 52, 199);
+            border-radius: 5px;
+        }
+        button {
+            background-color: rgb(137, 52, 199);
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(180, 114, 226);
+        }
+        .section {
+        background-image: url("../img/img.jpg");
+        background-size: cover;
+        background-position: center;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+   }
+    </style>
+</head>
+<body>
+    <div class="section"></div>
+
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="E-mail" required>
+            <input type="password" id="loginPassword" placeholder="Senha" required>
+            <button type="button" onclick="login()">Entrar</button>
+            <footer>
+            </footer>
+            <div class="remember">
+
+                <p>Não tem uma conta? <a href="../pages/register.html">Cadastre-se</a></p>
+                <p>&copy; 2025 MentoraX. Todos os direitos reservados.</p>
+                <a href="../pages/index.html ">Voltar</a>
+        </form>
+        </form>
+    </div>
+</body>
+</html>

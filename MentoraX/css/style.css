@@ -1,0 +1,14 @@
+@import url('layout.css');
+@import url('components.css');
+@import url('responsive.css');
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to right, #c733db 4%, #000000 100%);
+}
+
+main {
+  flex: 1;
+}
